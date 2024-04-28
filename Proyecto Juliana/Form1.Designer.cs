@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Juliana
 {
-    partial class Form1
+    partial class Juego
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.imgBender = new System.Windows.Forms.PictureBox();
             this.imgOvni1Abajo = new System.Windows.Forms.PictureBox();
             this.imgOvni2Abajo = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,12 @@
             this.imgRespuesta2 = new System.Windows.Forms.PictureBox();
             this.imgRespuesta3 = new System.Windows.Forms.PictureBox();
             this.ImgPregunta = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.imgVida1 = new System.Windows.Forms.PictureBox();
+            this.imgVida2 = new System.Windows.Forms.PictureBox();
+            this.imgVida3 = new System.Windows.Forms.PictureBox();
+            this.txtPuntuacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni2Abajo)).BeginInit();
@@ -60,6 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgPregunta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida3)).BeginInit();
             this.SuspendLayout();
             // 
             // imgBender
@@ -190,12 +200,64 @@
             this.ImgPregunta.TabIndex = 15;
             this.ImgPregunta.TabStop = false;
             // 
-            // Form1
+            // timer
+            // 
+            this.timer.Enabled = true;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(31, 12);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(131, 23);
+            this.progressBar.TabIndex = 16;
+            // 
+            // imgVida1
+            // 
+            this.imgVida1.Location = new System.Drawing.Point(40, 100);
+            this.imgVida1.Name = "imgVida1";
+            this.imgVida1.Size = new System.Drawing.Size(35, 40);
+            this.imgVida1.TabIndex = 17;
+            this.imgVida1.TabStop = false;
+            // 
+            // imgVida2
+            // 
+            this.imgVida2.Location = new System.Drawing.Point(80, 100);
+            this.imgVida2.Name = "imgVida2";
+            this.imgVida2.Size = new System.Drawing.Size(35, 40);
+            this.imgVida2.TabIndex = 18;
+            this.imgVida2.TabStop = false;
+            // 
+            // imgVida3
+            // 
+            this.imgVida3.Location = new System.Drawing.Point(120, 100);
+            this.imgVida3.Name = "imgVida3";
+            this.imgVida3.Size = new System.Drawing.Size(35, 40);
+            this.imgVida3.TabIndex = 19;
+            this.imgVida3.TabStop = false;
+            // 
+            // txtPuntuacion
+            // 
+            this.txtPuntuacion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPuntuacion.Enabled = false;
+            this.txtPuntuacion.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntuacion.Location = new System.Drawing.Point(48, 153);
+            this.txtPuntuacion.Name = "txtPuntuacion";
+            this.txtPuntuacion.Size = new System.Drawing.Size(100, 33);
+            this.txtPuntuacion.TabIndex = 20;
+            this.txtPuntuacion.Text = "0";
+            this.txtPuntuacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Juliana.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(960, 680);
+            this.Controls.Add(this.txtPuntuacion);
+            this.Controls.Add(this.imgVida3);
+            this.Controls.Add(this.imgVida2);
+            this.Controls.Add(this.imgVida1);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.ImgPregunta);
             this.Controls.Add(this.imgRespuesta3);
             this.Controls.Add(this.imgRespuesta2);
@@ -213,7 +275,7 @@
             this.Controls.Add(this.imgOvni1Abajo);
             this.Controls.Add(this.imgBender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Juego";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).EndInit();
@@ -231,7 +293,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgPregunta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVida3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,6 +319,12 @@
         private System.Windows.Forms.PictureBox imgRespuesta2;
         private System.Windows.Forms.PictureBox imgRespuesta3;
         private System.Windows.Forms.PictureBox ImgPregunta;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.PictureBox imgVida1;
+        private System.Windows.Forms.PictureBox imgVida2;
+        private System.Windows.Forms.PictureBox imgVida3;
+        private System.Windows.Forms.TextBox txtPuntuacion;
     }
 }
 

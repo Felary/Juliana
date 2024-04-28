@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Juliana
 {
-    public partial class Form1 : Form
+    public partial class Juego : Form
     {
-        public Form1()
+        public Juego()
         {
             InitializeComponent();
         }
