@@ -74,14 +74,18 @@
             // 
             // imgBender
             // 
+            this.imgBender.BackColor = System.Drawing.Color.Transparent;
+            this.imgBender.Image = global::Proyecto_Juliana.Properties.Resources.BenderFrente;
             this.imgBender.Location = new System.Drawing.Point(780, 622);
             this.imgBender.Name = "imgBender";
             this.imgBender.Size = new System.Drawing.Size(50, 50);
+            this.imgBender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgBender.TabIndex = 0;
             this.imgBender.TabStop = false;
             // 
             // imgOvni1Abajo
             // 
+            this.imgOvni1Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni1Abajo.Location = new System.Drawing.Point(729, 554);
             this.imgOvni1Abajo.Name = "imgOvni1Abajo";
             this.imgOvni1Abajo.Size = new System.Drawing.Size(50, 50);
@@ -90,6 +94,7 @@
             // 
             // imgOvni2Abajo
             // 
+            this.imgOvni2Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni2Abajo.Location = new System.Drawing.Point(517, 554);
             this.imgOvni2Abajo.Name = "imgOvni2Abajo";
             this.imgOvni2Abajo.Size = new System.Drawing.Size(50, 50);
@@ -98,6 +103,7 @@
             // 
             // imgOvni3Abajo
             // 
+            this.imgOvni3Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni3Abajo.Location = new System.Drawing.Point(320, 554);
             this.imgOvni3Abajo.Name = "imgOvni3Abajo";
             this.imgOvni3Abajo.Size = new System.Drawing.Size(50, 50);
@@ -106,6 +112,7 @@
             // 
             // imgOvni7Abajo
             // 
+            this.imgOvni7Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni7Abajo.Location = new System.Drawing.Point(86, 468);
             this.imgOvni7Abajo.Name = "imgOvni7Abajo";
             this.imgOvni7Abajo.Size = new System.Drawing.Size(50, 50);
@@ -114,6 +121,7 @@
             // 
             // imgOvni6Abajo
             // 
+            this.imgOvni6Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni6Abajo.Location = new System.Drawing.Point(224, 468);
             this.imgOvni6Abajo.Name = "imgOvni6Abajo";
             this.imgOvni6Abajo.Size = new System.Drawing.Size(50, 50);
@@ -122,6 +130,7 @@
             // 
             // imgOvni5Abajo
             // 
+            this.imgOvni5Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni5Abajo.Location = new System.Drawing.Point(370, 468);
             this.imgOvni5Abajo.Name = "imgOvni5Abajo";
             this.imgOvni5Abajo.Size = new System.Drawing.Size(50, 50);
@@ -130,6 +139,7 @@
             // 
             // imgOvni4Abajo
             // 
+            this.imgOvni4Abajo.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni4Abajo.Location = new System.Drawing.Point(517, 468);
             this.imgOvni4Abajo.Name = "imgOvni4Abajo";
             this.imgOvni4Abajo.Size = new System.Drawing.Size(50, 50);
@@ -138,6 +148,7 @@
             // 
             // imgOvni1Arriba
             // 
+            this.imgOvni1Arriba.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni1Arriba.Location = new System.Drawing.Point(846, 327);
             this.imgOvni1Arriba.Name = "imgOvni1Arriba";
             this.imgOvni1Arriba.Size = new System.Drawing.Size(50, 50);
@@ -146,6 +157,7 @@
             // 
             // imgOvni2Arriba
             // 
+            this.imgOvni2Arriba.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni2Arriba.Location = new System.Drawing.Point(628, 327);
             this.imgOvni2Arriba.Name = "imgOvni2Arriba";
             this.imgOvni2Arriba.Size = new System.Drawing.Size(50, 50);
@@ -154,6 +166,7 @@
             // 
             // imgOvni3Arriba
             // 
+            this.imgOvni3Arriba.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni3Arriba.Location = new System.Drawing.Point(415, 327);
             this.imgOvni3Arriba.Name = "imgOvni3Arriba";
             this.imgOvni3Arriba.Size = new System.Drawing.Size(50, 50);
@@ -162,6 +175,7 @@
             // 
             // imgOvni4Arriba
             // 
+            this.imgOvni4Arriba.BackColor = System.Drawing.Color.Transparent;
             this.imgOvni4Arriba.Location = new System.Drawing.Point(75, 327);
             this.imgOvni4Arriba.Name = "imgOvni4Arriba";
             this.imgOvni4Arriba.Size = new System.Drawing.Size(50, 50);
@@ -170,6 +184,7 @@
             // 
             // imgRespuesta1
             // 
+            this.imgRespuesta1.BackColor = System.Drawing.Color.Transparent;
             this.imgRespuesta1.Location = new System.Drawing.Point(236, 244);
             this.imgRespuesta1.Name = "imgRespuesta1";
             this.imgRespuesta1.Size = new System.Drawing.Size(50, 50);
@@ -178,6 +193,7 @@
             // 
             // imgRespuesta2
             // 
+            this.imgRespuesta2.BackColor = System.Drawing.Color.Transparent;
             this.imgRespuesta2.Location = new System.Drawing.Point(415, 244);
             this.imgRespuesta2.Name = "imgRespuesta2";
             this.imgRespuesta2.Size = new System.Drawing.Size(50, 50);
@@ -186,6 +202,7 @@
             // 
             // imgRespuesta3
             // 
+            this.imgRespuesta3.BackColor = System.Drawing.Color.Transparent;
             this.imgRespuesta3.Location = new System.Drawing.Point(609, 244);
             this.imgRespuesta3.Name = "imgRespuesta3";
             this.imgRespuesta3.Size = new System.Drawing.Size(50, 50);
@@ -194,15 +211,18 @@
             // 
             // ImgPregunta
             // 
+            this.ImgPregunta.BackColor = System.Drawing.Color.Transparent;
             this.ImgPregunta.Location = new System.Drawing.Point(152, 622);
             this.ImgPregunta.Name = "ImgPregunta";
             this.ImgPregunta.Size = new System.Drawing.Size(50, 50);
+            this.ImgPregunta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgPregunta.TabIndex = 15;
             this.ImgPregunta.TabStop = false;
             // 
             // timer
             // 
             this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // progressBar
             // 
@@ -240,6 +260,7 @@
             this.txtPuntuacion.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPuntuacion.Enabled = false;
             this.txtPuntuacion.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntuacion.ForeColor = System.Drawing.Color.Red;
             this.txtPuntuacion.Location = new System.Drawing.Point(48, 153);
             this.txtPuntuacion.Name = "txtPuntuacion";
             this.txtPuntuacion.Size = new System.Drawing.Size(100, 33);
@@ -274,9 +295,10 @@
             this.Controls.Add(this.imgOvni2Abajo);
             this.Controls.Add(this.imgOvni1Abajo);
             this.Controls.Add(this.imgBender);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Juego";
-            this.Text = "Form1";
+            this.Text = "Juego";
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni2Abajo)).EndInit();

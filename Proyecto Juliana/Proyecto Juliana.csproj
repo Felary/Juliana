@@ -83,5 +83,20 @@
   <ItemGroup>
     <None Include="Resources\fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderFrente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderIzquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderMuerto.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
