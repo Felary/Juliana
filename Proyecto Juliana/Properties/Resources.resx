@@ -118,22 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BenderDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BenderDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ovni5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BenderAtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BenderAtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ovni7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BenderIzquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BenderIzquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BenderFrente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BenderFrente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BenderAtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BenderAtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corazon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="muerte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\muerte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BenderFrente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BenderFrente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BenderDerecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BenderDerecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ovni11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ovni11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BenderMuerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BenderMuerto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

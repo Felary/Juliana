@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,8 @@ namespace Proyecto_Juliana
     {
         //Variables para el juego
         int vidas = 3, puntuacion = 0;
+        //Instanciar la clase SoundPlayer
+        SoundPlayer muerte = new SoundPlayer(@"e:\sonidos\freno.wav"); //Cambiar ruta según la ubicación del archivo
         public Juego()
         {
             InitializeComponent();
@@ -45,6 +48,8 @@ namespace Proyecto_Juliana
             puntuacion++;
             //Mostrar la puntuación
             txtPuntuacion.Text = "Puntuación: " + puntuacion;
+            //Llamar al método para detectar la colisión de las naves
+            colicionNaves();
 
         }
         private void moverImagenes() //Método para mover las imágenes
@@ -95,11 +100,299 @@ namespace Proyecto_Juliana
             //si bender colisiona con una nave se muestra la imagen de bender destruido, se quita una vida y se reposiciona
             if (imgBender.Bounds.IntersectsWith(imgOvni1Abajo.Bounds))
             {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni2Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni3Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni4Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni5Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni6Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni7Abajo.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni1Arriba.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni2Arriba.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni3Arriba.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+            else if (imgBender.Bounds.IntersectsWith(imgOvni4Arriba.Bounds))
+            {
+                //Se cambia la imagen de bender a bender destruido
+                imgBender.Image = Properties.Resources.BenderMuerto;
+                //Se llama al metodo para quitar una vida
+                quitarVida();
+                //Suena el sonido de muerte
+                muerte.Play();
+                //si las vidas son mayores a 0 bender vuelve a la posicion original
+                if (vidas > 0)
+                {
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+
+                }
+                else  //si las vidas son iguales a 0 se detiene el tiempo, suena el freno y se muestra la imagen de GAMEOVER
+                {
+                    //Se detiene el tiempo
+                    timer.Stop();
+                    //Suena el sonido de freno
+                    muerte.Play();
+                }
+            }
+        }
+        private void quitarVida() //Metodo para quitar una vida
+        {
+            //Si bender colisiona con una nave se quita una vida
+            switch (vidas)
+            {
+                case 1:
+                    //Se cambia la imagen de la vida a vida perdida
+                    imgVida3.Image = Properties.Resources.muerte;
+                    break;
+                case 2:
+                    //Se cambia la imagen de la vida a vida perdida
+                    imgVida2.Image = Properties.Resources.muerte;
+                    break;
+                case 3:
+                    //Se cambia la imagen de la vida a vida perdida
+                    imgVida1.Image = Properties.Resources.muerte;
+                    break;
+            }
+        }
+        private void colicionRespuestas() //Metodo para detectar la colisión de las respuestas
+        {
+            //Si bender colisiona con una respuesta se suma 200 puntos y se reposiciona bender
+            if (imgBender.Bounds.IntersectsWith(imgRespuesta1.Bounds))
+            {
+                //Se suma 200 puntos a la puntuación
+                puntuacion += 200;
+                //Se cambia la ubicacion de bender
+                imgBender.Location = new Point(780, 622);
 
             }
 
+        }
+        private void colicionPreguntas() //Metodo para detectar la colisión de las preguntas
+        {
 
+            if (imgBender.Bounds.IntersectsWith(imgPregunta.Bounds))
+            {
+
+            }
         }
 
     }
 }
+
