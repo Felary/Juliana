@@ -51,6 +51,7 @@
             this.imgVida2 = new System.Windows.Forms.PictureBox();
             this.imgVida3 = new System.Windows.Forms.PictureBox();
             this.txtPuntuacion = new System.Windows.Forms.TextBox();
+            this.txtPregunta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni2Abajo)).BeginInit();
@@ -76,7 +77,7 @@
             // 
             this.imgBender.BackColor = System.Drawing.Color.Transparent;
             this.imgBender.Image = global::Proyecto_Juliana.Properties.Resources.BenderFrente;
-            this.imgBender.Location = new System.Drawing.Point(780, 622);
+            this.imgBender.Location = new System.Drawing.Point(224, 622);
             this.imgBender.Name = "imgBender";
             this.imgBender.Size = new System.Drawing.Size(50, 50);
             this.imgBender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,15 +294,31 @@
             // txtPuntuacion
             // 
             this.txtPuntuacion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPuntuacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPuntuacion.Enabled = false;
             this.txtPuntuacion.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPuntuacion.ForeColor = System.Drawing.Color.Red;
             this.txtPuntuacion.Location = new System.Drawing.Point(48, 153);
             this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(100, 33);
+            this.txtPuntuacion.Size = new System.Drawing.Size(100, 26);
             this.txtPuntuacion.TabIndex = 20;
             this.txtPuntuacion.Text = "0";
             this.txtPuntuacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPregunta
+            // 
+            this.txtPregunta.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPregunta.Enabled = false;
+            this.txtPregunta.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPregunta.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtPregunta.Location = new System.Drawing.Point(31, 632);
+            this.txtPregunta.Name = "txtPregunta";
+            this.txtPregunta.Size = new System.Drawing.Size(100, 23);
+            this.txtPregunta.TabIndex = 21;
+            this.txtPregunta.Text = "Color";
+            this.txtPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPregunta.Visible = false;
             // 
             // Juego
             // 
@@ -309,6 +326,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Juliana.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(960, 680);
+            this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.txtPuntuacion);
             this.Controls.Add(this.imgVida3);
             this.Controls.Add(this.imgVida2);
@@ -334,6 +352,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Juego";
             this.Text = "Juego";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Juego_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni2Abajo)).EndInit();
@@ -382,6 +401,7 @@
         private System.Windows.Forms.PictureBox imgVida2;
         private System.Windows.Forms.PictureBox imgVida3;
         private System.Windows.Forms.TextBox txtPuntuacion;
+        private System.Windows.Forms.TextBox txtPregunta;
     }
 }
 

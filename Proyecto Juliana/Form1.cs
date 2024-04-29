@@ -13,13 +13,18 @@ namespace Proyecto_Juliana
 {
     public partial class Juego : Form
     {
+        //Se crea una matriz de 1x1 para guardar la pregunta y la respuesta
+        string[,] cuestionario = new string[2, 5];
         //Variables para el juego
-        int vidas = 3, puntuacion = 0;
+        int vidas = 3, puntuacion = 0, pregunta = 0;
         //Instanciar la clase SoundPlayer
-        SoundPlayer muerte = new SoundPlayer(@"e:\sonidos\freno.wav"); //Cambiar ruta según la ubicación del archivo
+        SoundPlayer muerte = new SoundPlayer(@"d:\sonidos\muerte.wav"); //Cambiar ruta según la ubicación del archivo
+        SoundPlayer sonidoPregunta; //Cambiar ruta según la ubicación del archivo
         public Juego()
         {
             InitializeComponent();
+            //Se llama al método para llenar el cuestionario
+            llenarCuestionario();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -47,9 +52,11 @@ namespace Proyecto_Juliana
             //Incrementar la puntuación
             puntuacion++;
             //Mostrar la puntuación
-            txtPuntuacion.Text = "Puntuación: " + puntuacion;
+            txtPuntuacion.Text = "" + puntuacion;
             //Llamar al método para detectar la colisión de las naves
             colicionNaves();
+            //Llamar al método para detectar la colisión de las preguntas
+            colicionPreguntas();
 
         }
         private void moverImagenes() //Método para mover las imágenes
@@ -76,7 +83,7 @@ namespace Proyecto_Juliana
             imgOvni6Abajo.Left = imgOvni6Abajo.Left - 10;
             imgOvni7Abajo.Left = imgOvni7Abajo.Left - 10;
         }
-        private void paredDerecha(PictureBox imagen) //Funcion para detectar la pared derecha
+        private void paredDerecha(PictureBox imagen) //Metodo para detectar la pared derecha
         {
             //Si la imagen llega a la pared derecha se muestra en el otro extremo
             if (imagen.Left >= 970)
@@ -86,7 +93,7 @@ namespace Proyecto_Juliana
             }
 
         }
-        private void paredIzquierda(PictureBox imagen) //Funcion para detectar la pared izquierda
+        private void paredIzquierda(PictureBox imagen) //Metodo para detectar la pared izquierda
         {
             //Si la imagen llega a la pared izquierda se muestra en el otro extremo
             if (imagen.Left <= -50)
@@ -370,6 +377,8 @@ namespace Proyecto_Juliana
                     imgVida1.Image = Properties.Resources.muerte;
                     break;
             }
+            //Se decrementa la cantidad de vidas
+            vidas--;
         }
         private void colicionRespuestas() //Metodo para detectar la colisión de las respuestas
         {
@@ -386,13 +395,91 @@ namespace Proyecto_Juliana
         }
         private void colicionPreguntas() //Metodo para detectar la colisión de las preguntas
         {
-
             if (imgBender.Bounds.IntersectsWith(imgPregunta.Bounds))
             {
+                //Se cambia la ubicacion de la imagen de la pregunta
+                imgPregunta.Location = new Point(168, 12);
+                //Se muestra la pregunta
+                txtPregunta.Visible = true;
+                //Se llama al metodo preguntaAleatoria
+                pregunta = PreguntaAleatoria();
+                //Se muestra la pregunta en el label
+                txtPregunta.Text = cuestionario[1, pregunta];
 
+                //Arreglar sonidos
+
+                string url = @"d:\sonidos\" + pregunta + ".wav";
+                sonidoPregunta = new SoundPlayer(url); //Cambiar ruta según la ubicación del archivo
+                sonidoPregunta.Play();
+            }
+            if (imgBender.Bounds.IntersectsWith(txtPregunta.Bounds))
+            {
+                string url = @"d:\sonidos\" + pregunta + ".wav";
+                sonidoPregunta = new SoundPlayer(url); //Cambiar ruta según la ubicación del archivo
+                sonidoPregunta.Play();
+            }
+        }
+        private void llenarCuestionario() //Metodo para llenar el cuestionario
+        {
+            //Se llena el cuestionario con las preguntas y respuestas
+            cuestionario[0, 0] = "1";
+            cuestionario[1, 0] = "BLUE";
+            cuestionario[0, 1] = "2";
+            cuestionario[1, 1] = "RED";
+            cuestionario[0, 2] = "3";
+            cuestionario[1, 2] = "BLACK";
+            cuestionario[0, 3] = "4";
+            cuestionario[1, 3] = "GREEN";
+            cuestionario[0, 4] = "5";
+            cuestionario[1, 4] = "PURPLE";
+        }
+        private void Juego_KeyDown(object sender, KeyEventArgs e) //Evento para mover a bender
+        {
+            //Si se presiona la tecla derecha se mueve bender a la derecha
+            if (e.KeyCode == Keys.Right)
+            {
+                //se incrementa la posicion de la rana en el eje X
+                imgBender.Left += 10;
+                //se muestra la imagen de bender mirando a la derecha
+                imgBender.Image = Properties.Resources.BenderDerecha;
+            }
+            //Si se presiona la tecla izquierda se mueve bender a la izquierda
+            if (e.KeyCode == Keys.Left)
+            {
+                //se decrementa la posicion de la rana en el eje X
+                imgBender.Left -= 10;
+                //se muestra la imagen de bender mirando a la izquierda
+                imgBender.Image = Properties.Resources.BenderIzquierda;
+            }
+            //Si se presiona la tecla arriba se mueve bender hacia arriba
+            if (e.KeyCode == Keys.Up)
+            {
+                //se decrementa la posicion de la rana en el eje Y
+                imgBender.Top -= 10;
+                //se muestra la imagen de bender mirando el frente
+                imgBender.Image = Properties.Resources.BenderFrente;
+
+            }
+            //Si se presiona la tecla abajo se mueve bender hacia abajo
+            if (e.KeyCode == Keys.Down)
+            {
+                //se incrementa la posicion de la rana en el eje Y
+                imgBender.Top += 10;
+                //se muestra la imagen de bender mirando hacia abajo
+                imgBender.Image = Properties.Resources.BenderAtras;
             }
         }
 
+        private int PreguntaAleatoria() //funcion para mostrar una pregunta aleatoria
+        {
+            //Se escoge una pregunta aleatoria
+            Random r = new Random();
+            //Se escoge un número aleatorio entre 1 y 5
+            int aux = r.Next(1, 5);
+            //Se retorna la pregunta
+            return aux;
+
+        }
     }
 }
 
