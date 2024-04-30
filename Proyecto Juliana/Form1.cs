@@ -419,7 +419,7 @@ namespace Proyecto_Juliana
                     //Se reposiciona la imagen de la pregunta
                     imgPregunta.Location = new Point(173, 622);
                     //Se muestra la imagen de la pregunta
-                    imgPregunta.Visible = true; 
+                    imgPregunta.Visible = true;
                     lblRespuesta.Text = "INCORRECTO";
                     lblRespuesta.Visible = true;
                 }
@@ -458,9 +458,108 @@ namespace Proyecto_Juliana
                     lblRespuesta.Visible = true;
                 }
             }
+            if (imgBender.Bounds.IntersectsWith(imgRespuesta3.Bounds))
+            {
 
+                if (pregunta == 2)
+                {
+                    //Se incrementa la puntuación
+                    puntuacion += 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    //Se incrementa la variable pregunta
+                    pregunta++;
 
+                    progressBar.Increment(20);
+                    lblRespuesta.Text = "CORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+                else
+                {
+                    //Se decrementa la puntuación
+                    puntuacion -= 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    lblRespuesta.Text = "INCORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+            }
+            if (imgBender.Bounds.IntersectsWith(imgRespuesta4.Bounds))
+            {
 
+                if (pregunta == 4)
+                {
+                    //Se incrementa la puntuación
+                    puntuacion += 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    //Se incrementa la variable pregunta
+                    pregunta++;
+
+                    progressBar.Increment(20);
+                    lblRespuesta.Text = "CORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+                else
+                {
+                    //Se decrementa la puntuación
+                    puntuacion -= 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    lblRespuesta.Text = "INCORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+            }
+            if (imgBender.Bounds.IntersectsWith(imgRespuesta5.Bounds))
+            {
+
+                if (pregunta == 3)
+                {
+                    //Se incrementa la puntuación
+                    puntuacion += 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    //Se incrementa la variable pregunta
+                    pregunta++;
+
+                    progressBar.Increment(20);
+                    lblRespuesta.Text = "CORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+                else
+                {
+                    //Se decrementa la puntuación
+                    puntuacion -= 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    lblRespuesta.Text = "INCORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+            }
         }
         private void colicionPreguntas() //Metodo para detectar la colisión de las preguntas
         {
@@ -490,7 +589,6 @@ namespace Proyecto_Juliana
                 colicionSonido(color);
             }
         }
-
         private void colicionSonido(string color)
         {
             switch (color)
@@ -512,10 +610,10 @@ namespace Proyecto_Juliana
                     sonidoPregunta.Play();
 
                     imgRespuesta1.Image = Properties.Resources._1; //CORRECTA
-                    imgRespuesta2.Image = Properties.Resources._0;
-                    imgRespuesta3.Image = Properties.Resources._2;
-                    imgRespuesta4.Image = Properties.Resources._4;
-                    imgRespuesta5.Image = Properties.Resources._3;
+                    imgRespuesta2.Image = Properties.Resources._4;
+                    imgRespuesta3.Image = Properties.Resources._3;
+                    imgRespuesta4.Image = Properties.Resources._2;
+                    imgRespuesta5.Image = Properties.Resources._0;
                     break;
                 case "BLACK":
                     sonidoPregunta = new SoundPlayer(@"d:\sonidos\BLACK.wav"); //Cambiar ruta según la ubicación del archivo
@@ -524,27 +622,27 @@ namespace Proyecto_Juliana
                     imgRespuesta1.Image = Properties.Resources._1;
                     imgRespuesta2.Image = Properties.Resources._0;
                     imgRespuesta3.Image = Properties.Resources._2; //CORRECTA
-                    imgRespuesta4.Image = Properties.Resources._4;
-                    imgRespuesta5.Image = Properties.Resources._3;
+                    imgRespuesta4.Image = Properties.Resources._3;
+                    imgRespuesta5.Image = Properties.Resources._4;
                     break;
                 case "GREEN":
                     sonidoPregunta = new SoundPlayer(@"d:\sonidos\GREEN.wav"); //Cambiar ruta según la ubicación del archivo
                     sonidoPregunta.Play();
-                    imgRespuesta1.Image = Properties.Resources._1;
-                    imgRespuesta2.Image = Properties.Resources._0;
-                    imgRespuesta3.Image = Properties.Resources._2;
-                    imgRespuesta4.Image = Properties.Resources._4;
+                    imgRespuesta1.Image = Properties.Resources._4;
+                    imgRespuesta2.Image = Properties.Resources._2;
+                    imgRespuesta3.Image = Properties.Resources._1;
+                    imgRespuesta4.Image = Properties.Resources._0;
                     imgRespuesta5.Image = Properties.Resources._3; //CORRECTA
 
                     break;
                 case "PURPLE":
                     sonidoPregunta = new SoundPlayer(@"d:\sonidos\PURPLE.wav"); //Cambiar ruta según la ubicación del archivo
                     sonidoPregunta.Play();
-                    imgRespuesta1.Image = Properties.Resources._1;
-                    imgRespuesta2.Image = Properties.Resources._0;
-                    imgRespuesta3.Image = Properties.Resources._2;
+                    imgRespuesta1.Image = Properties.Resources._0;
+                    imgRespuesta2.Image = Properties.Resources._2;
+                    imgRespuesta3.Image = Properties.Resources._3;
                     imgRespuesta4.Image = Properties.Resources._4; //CORRECTA
-                    imgRespuesta5.Image = Properties.Resources._3;
+                    imgRespuesta5.Image = Properties.Resources._1;
                     break;
             }
 
