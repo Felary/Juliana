@@ -52,6 +52,9 @@
             this.imgVida3 = new System.Windows.Forms.PictureBox();
             this.txtPuntuacion = new System.Windows.Forms.TextBox();
             this.txtPregunta = new System.Windows.Forms.TextBox();
+            this.lblRespuesta = new System.Windows.Forms.Label();
+            this.imgRespuesta4 = new System.Windows.Forms.PictureBox();
+            this.imgRespuesta5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni1Abajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOvni2Abajo)).BeginInit();
@@ -71,13 +74,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVida1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVida2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVida3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta5)).BeginInit();
             this.SuspendLayout();
             // 
             // imgBender
             // 
             this.imgBender.BackColor = System.Drawing.Color.Transparent;
             this.imgBender.Image = global::Proyecto_Juliana.Properties.Resources.BenderFrente;
-            this.imgBender.Location = new System.Drawing.Point(224, 622);
+            this.imgBender.Location = new System.Drawing.Point(251, 622);
             this.imgBender.Name = "imgBender";
             this.imgBender.Size = new System.Drawing.Size(50, 50);
             this.imgBender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,7 +244,7 @@
             // 
             this.imgPregunta.BackColor = System.Drawing.Color.Transparent;
             this.imgPregunta.Image = global::Proyecto_Juliana.Properties.Resources.Pregunta;
-            this.imgPregunta.Location = new System.Drawing.Point(152, 622);
+            this.imgPregunta.Location = new System.Drawing.Point(173, 622);
             this.imgPregunta.Name = "imgPregunta";
             this.imgPregunta.Size = new System.Drawing.Size(50, 50);
             this.imgPregunta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,9 +321,41 @@
             this.txtPregunta.Name = "txtPregunta";
             this.txtPregunta.Size = new System.Drawing.Size(100, 23);
             this.txtPregunta.TabIndex = 21;
-            this.txtPregunta.Text = "Color";
             this.txtPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPregunta.Visible = false;
+            // 
+            // lblRespuesta
+            // 
+            this.lblRespuesta.AutoSize = true;
+            this.lblRespuesta.BackColor = System.Drawing.Color.Transparent;
+            this.lblRespuesta.Enabled = false;
+            this.lblRespuesta.Font = new System.Drawing.Font("Tahoma", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblRespuesta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRespuesta.Location = new System.Drawing.Point(192, 53);
+            this.lblRespuesta.Name = "lblRespuesta";
+            this.lblRespuesta.Size = new System.Drawing.Size(0, 65);
+            this.lblRespuesta.TabIndex = 22;
+            this.lblRespuesta.Visible = false;
+            // 
+            // imgRespuesta4
+            // 
+            this.imgRespuesta4.BackColor = System.Drawing.Color.Transparent;
+            this.imgRespuesta4.Location = new System.Drawing.Point(75, 244);
+            this.imgRespuesta4.Name = "imgRespuesta4";
+            this.imgRespuesta4.Size = new System.Drawing.Size(50, 50);
+            this.imgRespuesta4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgRespuesta4.TabIndex = 23;
+            this.imgRespuesta4.TabStop = false;
+            // 
+            // imgRespuesta5
+            // 
+            this.imgRespuesta5.BackColor = System.Drawing.Color.Transparent;
+            this.imgRespuesta5.Location = new System.Drawing.Point(789, 244);
+            this.imgRespuesta5.Name = "imgRespuesta5";
+            this.imgRespuesta5.Size = new System.Drawing.Size(50, 50);
+            this.imgRespuesta5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgRespuesta5.TabIndex = 24;
+            this.imgRespuesta5.TabStop = false;
             // 
             // Juego
             // 
@@ -326,6 +363,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_Juliana.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(960, 680);
+            this.Controls.Add(this.imgRespuesta5);
+            this.Controls.Add(this.imgRespuesta4);
+            this.Controls.Add(this.lblRespuesta);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.txtPuntuacion);
             this.Controls.Add(this.imgVida3);
@@ -372,6 +412,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVida1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVida2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVida3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRespuesta5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,6 +444,9 @@
         private System.Windows.Forms.PictureBox imgVida3;
         private System.Windows.Forms.TextBox txtPuntuacion;
         private System.Windows.Forms.TextBox txtPregunta;
+        private System.Windows.Forms.Label lblRespuesta;
+        private System.Windows.Forms.PictureBox imgRespuesta4;
+        private System.Windows.Forms.PictureBox imgRespuesta5;
     }
 }
 

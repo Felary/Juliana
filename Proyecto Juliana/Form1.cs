@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -44,6 +45,9 @@ namespace Proyecto_Juliana
             paredIzquierda(imgRespuesta1);
             paredIzquierda(imgRespuesta2);
             paredIzquierda(imgRespuesta3);
+            paredIzquierda(imgRespuesta4);
+            paredIzquierda(imgRespuesta5);
+
             paredIzquierda(imgOvni4Abajo);
             paredIzquierda(imgOvni5Abajo);
             paredIzquierda(imgOvni6Abajo);
@@ -58,6 +62,8 @@ namespace Proyecto_Juliana
             //Llamar al método para detectar la colisión de las preguntas
             colicionPreguntas();
 
+            //Llamar al método para detectar la colisión de las respuestas
+            colicionRespuestas();
         }
         private void moverImagenes() //Método para mover las imágenes
         {
@@ -71,6 +77,8 @@ namespace Proyecto_Juliana
             imgRespuesta1.Left = imgRespuesta1.Left - 10;
             imgRespuesta2.Left = imgRespuesta2.Left - 10;
             imgRespuesta3.Left = imgRespuesta3.Left - 10;
+            imgRespuesta4.Left = imgRespuesta4.Left - 10;
+            imgRespuesta5.Left = imgRespuesta5.Left - 10;
 
             //Mover las imágenes de abajo de izquierda a derecha
             imgOvni1Abajo.Left = imgOvni1Abajo.Left + 10;
@@ -382,55 +390,181 @@ namespace Proyecto_Juliana
         }
         private void colicionRespuestas() //Metodo para detectar la colisión de las respuestas
         {
-            //Si bender colisiona con una respuesta se suma 200 puntos y se reposiciona bender
+
             if (imgBender.Bounds.IntersectsWith(imgRespuesta1.Bounds))
             {
-                //Se suma 200 puntos a la puntuación
-                puntuacion += 200;
-                //Se cambia la ubicacion de bender
-                imgBender.Location = new Point(780, 622);
+                if (pregunta == 1)
+                {
+                    //Se incrementa la puntuación
+                    puntuacion += 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    //Se incrementa la variable pregunta
+                    pregunta++;
 
+                    progressBar.Increment(20);
+                    lblRespuesta.Text = "CORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+                else
+                {
+                    //Se decrementa la puntuación
+                    puntuacion -= 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    lblRespuesta.Text = "INCORRECTO";
+                    lblRespuesta.Visible = true;
+                }
             }
+            if (imgBender.Bounds.IntersectsWith(imgRespuesta2.Bounds))
+            {
+
+                if (pregunta == 0)
+                {
+                    //Se incrementa la puntuación
+                    puntuacion += 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    //Se incrementa la variable pregunta
+                    pregunta++;
+
+                    progressBar.Increment(20);
+                    lblRespuesta.Text = "CORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+                else
+                {
+                    //Se decrementa la puntuación
+                    puntuacion -= 200;
+                    //Se reposiciona la imagen de bender
+                    imgBender.Location = new Point(780, 622);
+                    //Se reposiciona la imagen de la pregunta
+                    imgPregunta.Location = new Point(173, 622);
+                    //Se muestra la imagen de la pregunta
+                    imgPregunta.Visible = true;
+                    lblRespuesta.Text = "INCORRECTO";
+                    lblRespuesta.Visible = true;
+                }
+            }
+
+
 
         }
         private void colicionPreguntas() //Metodo para detectar la colisión de las preguntas
         {
-            if (imgBender.Bounds.IntersectsWith(imgPregunta.Bounds))
+            if (imgBender.Bounds.IntersectsWith(imgPregunta.Bounds) && imgPregunta.Location.X == 173 && imgPregunta.Location.Y == 622)
+            {
+
+                //Se cambia la ubicacion de la imagen de la pregunta
+                imgPregunta.Location = new Point(811, 397);
+                //Se muestra la pregunta
+                txtPregunta.Visible = true;
+                //Se muestra la pregunta en el label
+                string color = txtPregunta.Text = cuestionario[1, pregunta];
+                //Se llama al metodo para reproducir el sonido de la pregunta
+                colicionSonido(color);
+            }
+            if (imgBender.Bounds.IntersectsWith(imgPregunta.Bounds) && imgPregunta.Location.X == 811 && imgPregunta.Location.Y == 397)
             {
                 //Se cambia la ubicacion de la imagen de la pregunta
                 imgPregunta.Location = new Point(168, 12);
+                //Se oculta imgPregunta
+                imgPregunta.Visible = false;
                 //Se muestra la pregunta
                 txtPregunta.Visible = true;
-                //Se llama al metodo preguntaAleatoria
-                pregunta = PreguntaAleatoria();
                 //Se muestra la pregunta en el label
-                txtPregunta.Text = cuestionario[1, pregunta];
-
-                //Arreglar sonidos
-
-                string url = @"d:\sonidos\" + pregunta + ".wav";
-                sonidoPregunta = new SoundPlayer(url); //Cambiar ruta según la ubicación del archivo
-                sonidoPregunta.Play();
-            }
-            if (imgBender.Bounds.IntersectsWith(txtPregunta.Bounds))
-            {
-                string url = @"d:\sonidos\" + pregunta + ".wav";
-                sonidoPregunta = new SoundPlayer(url); //Cambiar ruta según la ubicación del archivo
-                sonidoPregunta.Play();
+                string color = txtPregunta.Text = cuestionario[1, pregunta];
+                //Se llama al metodo para reproducir el sonido de la pregunta
+                colicionSonido(color);
             }
         }
+
+        private void colicionSonido(string color)
+        {
+            switch (color)
+            {
+                case "BLUE":
+                    sonidoPregunta = new SoundPlayer(@"d:\sonidos\BLUE.wav"); //Cambiar ruta según la ubicación del archivo
+                    sonidoPregunta.Play();
+
+                    imgRespuesta1.Image = Properties.Resources._1;
+                    imgRespuesta2.Image = Properties.Resources._0; //CORRECTA
+                    imgRespuesta3.Image = Properties.Resources._2;
+                    imgRespuesta4.Image = Properties.Resources._4;
+                    imgRespuesta5.Image = Properties.Resources._3;
+
+
+                    break;
+                case "RED":
+                    sonidoPregunta = new SoundPlayer(@"d:\sonidos\RED.wav"); //Cambiar ruta según la ubicación del archivo
+                    sonidoPregunta.Play();
+
+                    imgRespuesta1.Image = Properties.Resources._1; //CORRECTA
+                    imgRespuesta2.Image = Properties.Resources._0;
+                    imgRespuesta3.Image = Properties.Resources._2;
+                    imgRespuesta4.Image = Properties.Resources._4;
+                    imgRespuesta5.Image = Properties.Resources._3;
+                    break;
+                case "BLACK":
+                    sonidoPregunta = new SoundPlayer(@"d:\sonidos\BLACK.wav"); //Cambiar ruta según la ubicación del archivo
+                    sonidoPregunta.Play();
+
+                    imgRespuesta1.Image = Properties.Resources._1;
+                    imgRespuesta2.Image = Properties.Resources._0;
+                    imgRespuesta3.Image = Properties.Resources._2; //CORRECTA
+                    imgRespuesta4.Image = Properties.Resources._4;
+                    imgRespuesta5.Image = Properties.Resources._3;
+                    break;
+                case "GREEN":
+                    sonidoPregunta = new SoundPlayer(@"d:\sonidos\GREEN.wav"); //Cambiar ruta según la ubicación del archivo
+                    sonidoPregunta.Play();
+                    imgRespuesta1.Image = Properties.Resources._1;
+                    imgRespuesta2.Image = Properties.Resources._0;
+                    imgRespuesta3.Image = Properties.Resources._2;
+                    imgRespuesta4.Image = Properties.Resources._4;
+                    imgRespuesta5.Image = Properties.Resources._3; //CORRECTA
+
+                    break;
+                case "PURPLE":
+                    sonidoPregunta = new SoundPlayer(@"d:\sonidos\PURPLE.wav"); //Cambiar ruta según la ubicación del archivo
+                    sonidoPregunta.Play();
+                    imgRespuesta1.Image = Properties.Resources._1;
+                    imgRespuesta2.Image = Properties.Resources._0;
+                    imgRespuesta3.Image = Properties.Resources._2;
+                    imgRespuesta4.Image = Properties.Resources._4; //CORRECTA
+                    imgRespuesta5.Image = Properties.Resources._3;
+                    break;
+            }
+
+        } //Metodo para detectar la colisión de los sonidos
         private void llenarCuestionario() //Metodo para llenar el cuestionario
         {
             //Se llena el cuestionario con las preguntas y respuestas
-            cuestionario[0, 0] = "1";
+            cuestionario[0, 0] = "0";
             cuestionario[1, 0] = "BLUE";
-            cuestionario[0, 1] = "2";
+
+            cuestionario[0, 1] = "1";
             cuestionario[1, 1] = "RED";
-            cuestionario[0, 2] = "3";
+
+            cuestionario[0, 2] = "2";
             cuestionario[1, 2] = "BLACK";
-            cuestionario[0, 3] = "4";
+
+            cuestionario[0, 3] = "3";
             cuestionario[1, 3] = "GREEN";
-            cuestionario[0, 4] = "5";
+
+            cuestionario[0, 4] = "4";
             cuestionario[1, 4] = "PURPLE";
         }
         private void Juego_KeyDown(object sender, KeyEventArgs e) //Evento para mover a bender
@@ -470,16 +604,6 @@ namespace Proyecto_Juliana
             }
         }
 
-        private int PreguntaAleatoria() //funcion para mostrar una pregunta aleatoria
-        {
-            //Se escoge una pregunta aleatoria
-            Random r = new Random();
-            //Se escoge un número aleatorio entre 1 y 5
-            int aux = r.Next(1, 5);
-            //Se retorna la pregunta
-            return aux;
-
-        }
     }
 }
 
