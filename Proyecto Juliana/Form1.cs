@@ -419,7 +419,7 @@ namespace Proyecto_Juliana
                     //Se reposiciona la imagen de la pregunta
                     imgPregunta.Location = new Point(173, 622);
                     //Se muestra la imagen de la pregunta
-                    imgPregunta.Visible = true;
+                    imgPregunta.Visible = true; 
                     lblRespuesta.Text = "INCORRECTO";
                     lblRespuesta.Visible = true;
                 }
