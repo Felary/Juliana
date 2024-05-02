@@ -83,5 +83,77 @@
   <ItemGroup>
     <None Include="Resources\fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderFrente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderIzquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BenderMuerto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muerte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovni11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pregunta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
