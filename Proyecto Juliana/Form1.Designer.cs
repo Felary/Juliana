@@ -391,6 +391,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Juego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Juego_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgBender)).EndInit();

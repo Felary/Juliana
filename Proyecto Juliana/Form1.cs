@@ -9,6 +9,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_Juliana
 {
@@ -64,6 +65,8 @@ namespace Proyecto_Juliana
 
             //Llamar al método para detectar la colisión de las respuestas
             colicionRespuestas();
+            //Se llama al metodo finJuego
+            finJuego();
         }
         private void moverImagenes() //Método para mover las imágenes
         {
@@ -405,6 +408,8 @@ namespace Proyecto_Juliana
                     imgPregunta.Visible = true;
                     //Se incrementa la variable pregunta
                     pregunta++;
+                    //Se oculta la pregunta
+                    txtPregunta.Visible = false;
 
                     progressBar.Increment(20);
                     lblRespuesta.Text = "CORRECTO";
@@ -439,6 +444,8 @@ namespace Proyecto_Juliana
                     imgPregunta.Visible = true;
                     //Se incrementa la variable pregunta
                     pregunta++;
+                    //Se oculta la pregunta
+                    txtPregunta.Visible = false;
 
                     progressBar.Increment(20);
                     lblRespuesta.Text = "CORRECTO";
@@ -473,6 +480,8 @@ namespace Proyecto_Juliana
                     imgPregunta.Visible = true;
                     //Se incrementa la variable pregunta
                     pregunta++;
+                    //Se oculta la pregunta
+                    txtPregunta.Visible = false;
 
                     progressBar.Increment(20);
                     lblRespuesta.Text = "CORRECTO";
@@ -507,6 +516,8 @@ namespace Proyecto_Juliana
                     imgPregunta.Visible = true;
                     //Se incrementa la variable pregunta
                     pregunta++;
+                    //Se oculta la pregunta
+                    txtPregunta.Visible = false;
 
                     progressBar.Increment(20);
                     lblRespuesta.Text = "CORRECTO";
@@ -541,6 +552,8 @@ namespace Proyecto_Juliana
                     imgPregunta.Visible = true;
                     //Se incrementa la variable pregunta
                     pregunta++;
+                    //Se oculta la pregunta
+                    txtPregunta.Visible = false;
 
                     progressBar.Increment(20);
                     lblRespuesta.Text = "CORRECTO";
@@ -701,7 +714,32 @@ namespace Proyecto_Juliana
                 imgBender.Image = Properties.Resources.BenderAtras;
             }
         }
+        private void finJuego() //Metodo para finalizar el juego
+        {
+            //Si las vidas son iguales a 0 Se mostrara la ventana formMenu
+            if (vidas == 0)
+            {
+                //Detiene el timer
+                timer.Stop();
+                //Muestra un cuadro de dialogo donde le pregunta al usuario si desea reinicar el juego y muestra la puntuacion
+                MessageBox.Show("GAME OVER\nPuntuación: " + puntuacion, "GAME OVER", MessageBoxButtons.OK);
 
+                //utiliza el return para salir del metodo
+                return;
+            }
+            //Si el contador de preguntas es igual a 10
+            if (pregunta == 5)
+            {
+                //Detiene el timer
+                timer.Stop();
+
+                //Muestra un cuadro de dialogo donde se felicita al usuario por haber superado el nively muestra la puntuacion
+                MessageBox.Show("¡Felicidades! Has completado todas las preguntas\nPuntuación: " + puntuacion, "¡Felicidades!", MessageBoxButtons.OK);
+                //utiliza el return para salir del metodo
+                return;
+            }
+
+        }
     }
 }
 
